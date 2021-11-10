@@ -1,9 +1,12 @@
 package com.application.realtimefacedetection
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
+import androidx.databinding.DataBindingUtil
+import com.application.realtimefacedetection.databinding.ActivityMainBinding
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.face.FaceContour
 import com.google.mlkit.vision.face.FaceDetection
@@ -14,8 +17,19 @@ import com.google.mlkit.vision.face.FaceLandmark
 class MainActivity : AppCompatActivity(), ImageAnalysis.Analyzer {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding =
+            DataBindingUtil.setContentView(this, R.layout.activity_main)
         setupFaceDetection()
+        setupClickListeners()
+    }
+
+    lateinit var binding: ActivityMainBinding
+    private fun setupClickListeners() {
+        binding.launchCamera.setOnClickListener {
+            val intent =
+                Intent(applicationContext, CameraLiveActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private lateinit var detector: FaceDetector
