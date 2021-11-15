@@ -1,5 +1,3 @@
-
-
 package com.application.realtimefacedetection
 
 import FaceGraphic
@@ -16,14 +14,18 @@ import com.google.mlkit.vision.face.FaceDetectorOptions
 
 /** Face Detector Demo.  */
 class FaceDetectorProcessor(context: Context) :
-    VisionProcessorBase<List<Face>>(context){
+    VisionProcessorBase<List<Face>>(context) {
 
     private val detector: FaceDetector
 
     init {
-        val options = FaceDetectorOptions.Builder()
-            .setContourMode(FaceDetectorOptions.CONTOUR_MODE_ALL)
-            .build()
+        val options =
+            FaceDetectorOptions.Builder()
+                .setLandmarkMode(FaceDetectorOptions.LANDMARK_MODE_ALL)
+                .setClassificationMode(FaceDetectorOptions.CLASSIFICATION_MODE_ALL)
+                .setContourMode(FaceDetectorOptions.CONTOUR_MODE_ALL)
+                .enableTracking()
+                .build()
 
         detector = FaceDetection.getClient(options)
 
