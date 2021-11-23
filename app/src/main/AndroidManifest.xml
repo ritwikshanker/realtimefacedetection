@@ -39,7 +39,11 @@
         <activity
             android:name=".CameraLiveActivity"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".proctoring.ProctoringActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="false"/>
 
     </application>
     <queries>
