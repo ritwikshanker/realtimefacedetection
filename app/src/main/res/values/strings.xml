@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RealTimeFaceDetection</string>
+    <string name="launch_camera">Launch Camera</string>
+    <string name="launch_proctoring_scenario">Launch Proctoring Scenario</string>
 </resources>
