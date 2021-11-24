@@ -19,7 +19,7 @@ class ProctoringActivity : AppCompatActivity() {
     }
 
     override fun onMultiWindowModeChanged(isInMultiWindowMode: Boolean, newConfig: Configuration?) {
-        Toast.makeText(this, "Don't you dare to cheat - onMultiWindowModeChanged", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Don't you dare try to cheat - onMultiWindowModeChanged", Toast.LENGTH_LONG).show()
         super.onMultiWindowModeChanged(isInMultiWindowMode, newConfig)
     }
 
@@ -27,7 +27,7 @@ class ProctoringActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (isInMultiWindowMode){
-            Toast.makeText(this, "Don't you dare to cheat - onResume", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show()
         }
     }
 }
