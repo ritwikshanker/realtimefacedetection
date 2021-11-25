@@ -17,8 +17,16 @@ class ProctoringActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding =
             DataBindingUtil.setContentView(this, R.layout.activity_proctoring)
-
         checkDeveloperOption()
+        checkUSBDebugging()
+    }
+
+    private fun checkUSBDebugging() {
+        if (Settings.Secure.getInt(this.contentResolver, Settings.Global.ADB_ENABLED, 0) == 1) {
+            Toast.makeText(this, "USB Debugging is On", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Normie User", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun checkDeveloperOption() {
