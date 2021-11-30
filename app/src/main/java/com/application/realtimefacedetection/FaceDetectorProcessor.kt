@@ -21,11 +21,9 @@ class FaceDetectorProcessor(context: Context) :
     init {
         val options =
             FaceDetectorOptions.Builder()
-                .setLandmarkMode(FaceDetectorOptions.LANDMARK_MODE_ALL)
-                .setClassificationMode(FaceDetectorOptions.CLASSIFICATION_MODE_ALL)
                 .setContourMode(FaceDetectorOptions.CONTOUR_MODE_ALL)
-                .enableTracking()
                 .build()
+
 
         detector = FaceDetection.getClient(options)
 
