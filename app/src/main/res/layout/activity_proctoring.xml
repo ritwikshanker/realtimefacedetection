@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:defaultWidth="6000dp"
-    android:defaultHeight="5000dp"
-    android:gravity="top|end"
-    android:minWidth="6000dp"
-    android:minHeight="5000dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".proctoring.ProctoringActivity">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/launch_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/procotor_case_1"
-            app:layout_constraintBottom_toTopOf="@+id/check_proctoring"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/check_proctoring"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/launch_proctoring_scenario"
+            android:textSize="16sp"
+            android:text="@string/proctor_cases"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/launch_camera" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

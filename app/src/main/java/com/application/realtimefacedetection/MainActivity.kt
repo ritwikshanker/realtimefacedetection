@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.checkProctoring.setOnClickListener {
             val intent =
                 Intent(applicationContext, ProctoringActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
     }

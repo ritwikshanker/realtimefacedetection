@@ -2,5 +2,5 @@
     <string name="app_name">Android Proctor</string>
     <string name="launch_camera">Launch Camera</string>
     <string name="launch_proctoring_scenario">Launch Proctoring Scenario</string>
-    <string name="procotor_case_1">1. Try resizing the app</string>
+    <string name="proctor_cases">Cases Covered \n1. Checking Developer Options \n2. Check USB Debugging \n3. Check Device Root \n4. Try resizing the app and splitting the app</string>
 </resources>
